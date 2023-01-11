@@ -1,0 +1,33 @@
+local Library = loadstring(game:HttpGet("https://github.com/ANDREY4IGSCRIPTS/ui/blob/main/Library"))()
+
+local Window = Library.CreateLib("INTERMINABLE ROOMS Script", "RJTheme3")
+
+local Tab = Window:NewTab("Player")
+
+local Section = Tab:NewSection("Values")
+
+Section:NewSlider("WalkSpeed", "Normal WalkSpeed Value is 16", 500, 0, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+Section:NewSlider("JumpHeight", "Normal JumpHeight Value is 7 - 7.2", 100, 0, function(a)
+    game.Players.LocalPlayer.Character.Humanoid.JumpHeight = a
+end)
+
+Section:NewButton("Reset Values", "It button reset WalkSpeed and JumpHeight", function()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+	game.Players.LocalPlayer.Character.Humanoid.JumpHeight = 7.2
+end)
+
+local Tab = Window:NewTab("More")
+
+local Section = Tab:NewSection("More")
+
+Section:NewButton("Inf Flashlight", "Make Infinity Flashlight", function()
+    game.Players.LocalPlayer.Character.FlashlightValues:Destroy()
+    game.Players.LocalPlayer.Character.Battery.Value = 500
+end)
+
+Section:NewButton("Reset Character", "OOF", function()
+    game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end)
