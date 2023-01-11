@@ -1,4 +1,4 @@
-local Library = loadstring(game:HttpGet("https://github.com/ANDREY4IGSCRIPTS/ui/blob/main/Library"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
 
 local Window = Library.CreateLib("INTERMINABLE ROOMS Script", "RJTheme3")
 
@@ -31,3 +31,13 @@ end)
 Section:NewButton("Reset Character", "OOF", function()
     game.Players.LocalPlayer.Character.Humanoid.Health = 0
 end)
+
+Section:NewButton("Infinity Yield FE v5.9.3", "...", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+end)
+
+local Tab = Window:NewTab("Credits")
+
+local Section = Tab:NewSection("Credits")
+
+Section:NewLabel("Script By ANDREY4IG")
